@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    compileSdkVersion compileSdk
+    buildToolsVersion buildTools
+
     defaultConfig {
         applicationId "com.raybritton.playpausetoggle"
-        minSdkVersion 20
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode appVerCode
+        versionName appVerName
     }
     signingConfigs {
         global {
@@ -39,6 +40,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.google.android.support:wearable:2.0.3'
-    compile 'com.google.android.gms:play-services-wearable:11.0.2'
+    compile "com.google.android.support:wearable:$wearLibVer"
+    compile "com.google.android.gms:play-services-wearable:$playLibVer"
 }

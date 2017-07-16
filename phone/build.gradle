@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion compileSdk
+    buildToolsVersion buildTools
+
+    defaultConfig {
+        applicationId "com.raybritton.playpausetoggle"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode appVerCode + 1
+        versionName appVerName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    signingConfigs {
+        global {
+
+        }
+    }
+
+    def props = new Properties()
+
+    props.load(new FileInputStream(rootProject.file("release.properties")))
+    android.signingConfigs.global.storeFile rootProject.file(props.keyStore)
+    android.signingConfigs.global.storePassword props.keyStorePassword
+    android.signingConfigs.global.keyAlias props.keyAlias
+    android.signingConfigs.global.keyPassword props.keyAliasPassword
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.global
+            applicationIdSuffix ".dev"
+        }
+        release {
+            signingConfig signingConfigs.global
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile "com.google.android.gms:play-services-wearable:$playLibVer"
+}

@@ -13,6 +13,14 @@ buildscript {
 }
 
 allprojects {
+    ext.appVerCode = 38
+    ext.appVerName = "4.3"
+    ext.minSdk = 21
+    ext.targetSdk = 26
+    ext.compileSdk = 26
+    ext.buildTools = '26.0.0'
+    ext.wearLibVer = '2.0.3'
+    ext.playLibVer = '11.0.2'
     repositories {
         jcenter()
     }
