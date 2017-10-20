@@ -13,8 +13,8 @@ buildscript {
 }
 
 allprojects {
-    ext.appVerCode = 38
-    ext.appVerName = "4.3"
+    ext.appVerCode = 39
+    ext.appVerName = "5.0"
     ext.minSdk = 21
     ext.targetSdk = 26
     ext.compileSdk = 26
