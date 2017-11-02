@@ -8,7 +8,7 @@ android {
         applicationId "com.raybritton.playpausetoggle"
         minSdkVersion minSdk
         targetSdkVersion targetSdk
-        versionCode appVerCode + 1
+        versionCode appVerCode
         versionName appVerName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -43,6 +43,4 @@ android {
 
 dependencies {
     compile "com.google.android.gms:play-services-wearable:$playLibVer"
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

@@ -8,7 +8,7 @@ android {
         applicationId "com.raybritton.playpausetoggle"
         minSdkVersion minSdk
         targetSdkVersion targetSdk
-        versionCode appVerCode
+        versionCode appVerCode + 1
         versionName appVerName
     }
     signingConfigs {
@@ -40,6 +40,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.google.android.support:wearable:$wearLibVer"
+    provided "com.google.android.wearable:wearable:$wearLibVer"
     compile "com.google.android.gms:play-services-wearable:$playLibVer"
 }
