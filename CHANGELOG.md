@@ -1,3 +1,7 @@
+### 5.1
+
+- App will no longer resume playback unless headphones are plugged in.
+
 ### 5.0
 
 - App can now toggle playback of almost all media apps.
