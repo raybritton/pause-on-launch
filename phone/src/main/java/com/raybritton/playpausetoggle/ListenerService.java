@@ -12,7 +12,7 @@ public class ListenerService extends WearableListenerService {
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
         AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
-        if(am.isWiredHeadsetOn()) {
+        if(am.isWiredHeadsetOn() || am.isBluetoothA2dpOn()) {
             sendMediaButton(am, KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE);
         } else {
             sendMediaButton(am, KeyEvent.KEYCODE_MEDIA_PAUSE);

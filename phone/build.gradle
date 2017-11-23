@@ -31,7 +31,6 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.global
-            applicationIdSuffix ".dev"
         }
         release {
             signingConfig signingConfigs.global
@@ -42,5 +41,5 @@ android {
 }
 
 dependencies {
-    compile "com.google.android.gms:play-services-wearable:$playLibVer"
+    implementation "com.google.android.gms:play-services-wearable:$playLibVer"
 }

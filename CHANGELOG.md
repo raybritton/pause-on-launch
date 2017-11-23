@@ -1,3 +1,7 @@
+### 5.2
+
+- App will resume playback when headphones are plugged in or bluetooth audio device is connected.
+
 ### 5.1
 
 - App will no longer resume playback unless headphones are plugged in.
