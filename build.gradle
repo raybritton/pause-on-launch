@@ -6,7 +6,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -14,14 +14,14 @@ buildscript {
 }
 
 allprojects {
-    ext.appVerCode = 48
-    ext.appVerName = "5.2"
+    ext.appVerCode = 50 //must be a multiple of two as the watch is appVerCode + 1
+    ext.appVerName = "5.2.1"
     ext.minSdk = 23
-    ext.targetSdk = 26
-    ext.compileSdk = 26
-    ext.buildTools = '27.0.1'
-    ext.wearLibVer = '2.0.3'
-    ext.playLibVer = '11.6.0'
+    ext.targetSdk = 27
+    ext.compileSdk = 27
+    ext.buildTools = '27.0.3'
+    ext.wearLibVer = '2.1.0'
+    ext.playLibVer = '15.0.0'
     repositories {
         jcenter()
         google()
